@@ -1,14 +1,10 @@
 ---
-title: API Reference
+title: OwnLocal API Docs
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -21,80 +17,39 @@ code_clipboard: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the OwnLocal API. You can use our API to access OwnLocal API endpoints.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+You can view code examples in the dark area to the right.
 
 # Authentication
 
 > To authorize, use this code:
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here" \
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: <token>"
 ```
 
-```javascript
-const kittn = require('kittn');
+> Make sure to replace `<token>` with your API key.
 
-let api = kittn.authorize('meowmeowmeow');
-```
+OwnLocal uses API keys to allow access to the API. Contact our support team to get your API key.
 
-> Make sure to replace `meowmeowmeow` with your API key.
+OwnLocal expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+`Authorization: <token>`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code><token></code> with your organization API key.
 </aside>
 
-# Kittens
+# Ads
 
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+## Get All Ads
 
 ```shell
-curl "http://example.com/api/kittens" \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+curl "http://admin.austin.ownlocal.com/api/v1/ads" \
+  -H "Authorization: <token>"
 ```
 
 > The above command returns JSON structured like this:
@@ -102,140 +57,265 @@ let kittens = api.kittens.get();
 ```json
 [
   {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+    "adUuid": "795d064b-1810-4f6b-bada-6a9f7d534579",
+    "fileName": "{original_filename}.pdf",
+    "adCustomId": "234567",
+    "businessUuid": "2db5e240-c098-4d59-b3a3-bc7b7abc2c4c",
+    "publisherUuid": "2db5e240-c098-4d59-b3a3-bc7b7abc2c4c",
+    "image": "https://assets.ownlocal.com/ads/795d064b-1810-4f6b-bada-6a9f7d534579/order_image.jpeg",
+    "startDate": "2019-09-01",
+    "endDate": "2019-09-30",
+    "dateModified": "2019-09-03",
+    "dateCreated": "2019-09-03",
+    "adText": "string",
+    "offerCount": "4",
+    "offers": [
+      {
+        "offerUuid": "bbfdc747-b2c9-4232-be7a-81dbf5290af4",
+        "offerImage": "https://ownlocal.imgix.net/offers/bbfdc747-b2c9-4232-be7a-81dbf5290af4.png",
+        "title": "40% Off Full Interior Detail Package",
+        "description": "",
+        "originalPrice": "",
+        "discountPercentage": "",
+        "discountPrice": "",
+        "discountOff": "",
+        "newPrice": "",
+        "bogo": false,
+        "free": false,
+        "validThrough": "",
+        "gtin8": [
+          {
+            "class": 77015300
+          },
+          {
+            "class": 77015301
+          }
+        ]
+      },
+      {
+        "offerUuid": "5faaff6a-5ad9-4fcf-b68d-a025b1badd29",
+        "offerImage": "https://ownlocal.imgix.net/offers/5faaff6a-5ad9-4fcf-b68d-a025b1badd29.png",
+        "title": "Free Brake Inspection with Every Oil Change",
+        "description": "",
+        "originalPrice": "",
+        "discountPercentage": "",
+        "discountPrice": "",
+        "discountOff": "",
+        "newPrice": "",
+        "bogo": false,
+        "free": false,
+        "validThrough": "",
+        "gtin8": [
+          {
+            "class": 77015300
+          },
+          {
+            "class": 77015301
+          }
+        ]
+      },
+      {
+        "offerUuid": "2df8c96b-f565-4c77-b776-8b02a9a92d30",
+        "offerImage": "https://ownlocal.imgix.net/offers/2df8c96b-f565-4c77-b776-8b02a9a92d30.png",
+        "title": "20% Off Full Vehicle Tint",
+        "description": "",
+        "originalPrice": "",
+        "discountPercentage": "",
+        "discountPrice": "",
+        "discountOff": "",
+        "newPrice": "",
+        "bogo": false,
+        "free": false,
+        "validThrough": "",
+        "gtin8": [
+          {
+            "class": 77011700
+          },
+          {
+            "class": 77011701
+          }
+        ]
+      },
+      {
+        "offerUuid": "fea2a6e0-7993-460a-9a54-88acf6dc479b",
+        "offerImage": "https://ownlocal.imgix.net/offers/fea2a6e0-7993-460a-9a54-88acf6dc479b.png",
+        "title": "$150 Off Windshield Replacement (when going through Insurance)",
+        "description": "",
+        "originalPrice": "",
+        "discountPercentage": "",
+        "discountPrice": "",
+        "discountOff": "",
+        "newPrice": "",
+        "bogo": false,
+        "free": false,
+        "validThrough": "",
+        "gtin8": [
+          {
+            "class": 77011300
+          },
+          {
+            "class": 77011301
+          }
+        ]
+      }
+    ]
   }
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all ads.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://admin.austin.ownlocal.com/api/v1/ads`
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | Type | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+categories | string array | Lists ads from business belonging to those categories
+subCategories | string array | Lists ads from business belonging to those sub categories
+offerCountMin | integer | Lists ads with offers count is greater or equal than the value provided
+offerCountMax | integer | Lists ads with offers count is lesser or equal than the value provided
+startDateMin | date | Lists ads with start date after or equal to the provided value
+startDateMax | date | Lists ads with start date before or equal to the provided value
+endDateMin | date | Lists ads with end date after or equal to the provided value
+endDateMax | date | Lists ads with end date before or equal to the provided value
+dateModifiedMin | date | Lists ads modified that day or after
+dateModifiedMax | date | Lists ads modified that day or before
+dateCreatedMin | date | Lists ads created that day or after
+dateCreatedMax | date | Lists ads created that day or before
+businessUuids | string array | Lists ads belonging to the specified businesses
+publisherUuids | string array | Lists ads published by the specified partners
+sortedBy | string | Specifies the sorting order
+size | integer | Specifies the response size in ads amount (default: 20)
+page | integer | Specifies the page to retrieve based in the size parameter (default: 1)
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+## Get a Specific Ad
 
 ```shell
-curl "http://example.com/api/kittens/2" \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+curl "http://admin.austin.ownlocal.com/api/v1/ads/795d064b-1810-4f6b-bada-6a9f7d534579" \
+  -H "Authorization: <token>"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "adUuid": "795d064b-1810-4f6b-bada-6a9f7d534579",
+  "fileName": "{original_filename}.pdf",
+  "adCustomId": "234567",
+  "businessUuid": "2db5e240-c098-4d59-b3a3-bc7b7abc2c4c",
+  "publisherUuid": "2db5e240-c098-4d59-b3a3-bc7b7abc2c4c",
+  "image": "https://assets.ownlocal.com/ads/795d064b-1810-4f6b-bada-6a9f7d534579/order_image.jpeg",
+  "startDate": "2019-09-01",
+  "endDate": "2019-09-30",
+  "dateModified": "2019-09-03",
+  "dateCreated": "2019-09-03",
+  "adText": "string",
+  "offerCount": "4",
+  "offers": [
+    {
+      "offerUuid": "bbfdc747-b2c9-4232-be7a-81dbf5290af4",
+      "offerImage": "https://ownlocal.imgix.net/offers/bbfdc747-b2c9-4232-be7a-81dbf5290af4.png",
+      "title": "40% Off Full Interior Detail Package",
+      "description": "",
+      "originalPrice": "",
+      "discountPercentage": "",
+      "discountPrice": "",
+      "discountOff": "",
+      "newPrice": "",
+      "bogo": false,
+      "free": false,
+      "validThrough": "",
+      "gtin8": [
+        {
+          "class": 77015300
+        },
+        {
+          "class": 77015301
+        }
+      ]
+    },
+    {
+      "offerUuid": "5faaff6a-5ad9-4fcf-b68d-a025b1badd29",
+      "offerImage": "https://ownlocal.imgix.net/offers/5faaff6a-5ad9-4fcf-b68d-a025b1badd29.png",
+      "title": "Free Brake Inspection with Every Oil Change",
+      "description": "",
+      "originalPrice": "",
+      "discountPercentage": "",
+      "discountPrice": "",
+      "discountOff": "",
+      "newPrice": "",
+      "bogo": false,
+      "free": false,
+      "validThrough": "",
+      "gtin8": [
+        {
+          "class": 77015300
+        },
+        {
+          "class": 77015301
+        }
+      ]
+    },
+    {
+      "offerUuid": "2df8c96b-f565-4c77-b776-8b02a9a92d30",
+      "offerImage": "https://ownlocal.imgix.net/offers/2df8c96b-f565-4c77-b776-8b02a9a92d30.png",
+      "title": "20% Off Full Vehicle Tint",
+      "description": "",
+      "originalPrice": "",
+      "discountPercentage": "",
+      "discountPrice": "",
+      "discountOff": "",
+      "newPrice": "",
+      "bogo": false,
+      "free": false,
+      "validThrough": "",
+      "gtin8": [
+        {
+          "class": 77011700
+        },
+        {
+          "class": 77011701
+        }
+      ]
+    },
+    {
+      "offerUuid": "fea2a6e0-7993-460a-9a54-88acf6dc479b",
+      "offerImage": "https://ownlocal.imgix.net/offers/fea2a6e0-7993-460a-9a54-88acf6dc479b.png",
+      "title": "$150 Off Windshield Replacement (when going through Insurance)",
+      "description": "",
+      "originalPrice": "",
+      "discountPercentage": "",
+      "discountPrice": "",
+      "discountOff": "",
+      "newPrice": "",
+      "bogo": false,
+      "free": false,
+      "validThrough": "",
+      "gtin8": [
+        {
+          "class": 77011300
+        },
+        {
+          "class": 77011301
+        }
+      ]
+    }
+  ]
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+This endpoint retrieves a specific ad.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://admin.austin.ownlocal.com/api/v1/ads/<uuid>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
+uuid | The uuid of the ad to retrieve
