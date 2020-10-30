@@ -318,7 +318,16 @@
                     <a href="#get-all-ads" class="toc-h2 toc-link" data-title="Get All Ads">Get All Ads</a>
                   </li>
                   <li>
+                    <a href="#create-an-ad" class="toc-h2 toc-link" data-title="Create an Ad">Create an Ad</a>
+                  </li>
+                  <li>
                     <a href="#get-a-specific-ad" class="toc-h2 toc-link" data-title="Get a Specific Ad">Get a Specific Ad</a>
+                  </li>
+                  <li>
+                    <a href="#update-an-ad" class="toc-h2 toc-link" data-title="Update an Ad">Update an Ad</a>
+                  </li>
+                  <li>
+                    <a href="#upload-ad-file" class="toc-h2 toc-link" data-title="Upload Ad file">Upload Ad file</a>
                   </li>
               </ul>
           </li>
@@ -358,7 +367,7 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 <aside class="notice">
 You must replace <code><token></code> with your organization API key.
 </aside>
-<h1 id='ads'>Ads</h1><h2 id='get-all-ads'>Get All Ads</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://admin.austin.ownlocal.com/api/v1/ads"</span> <span class="se">\</span>
+<h1 id='ads'>Ads</h1><h2 id='get-all-ads'>Get All Ads</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/ads"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span>
 </code></pre></div>
 <blockquote>
@@ -473,7 +482,7 @@ You must replace <code><token></code> with your organization API key.
 </span></code></pre></div>
 <p>This endpoint retrieves all ads.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://admin.austin.ownlocal.com/api/v1/ads</code></p>
+<p><code>GET https://admin.austin.ownlocal.com/api/v1/ads</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -568,7 +577,54 @@ You must replace <code><token></code> with your organization API key.
 <td>Specifies the page to retrieve based in the size parameter (default: 1)</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-specific-ad'>Get a Specific Ad</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://admin.austin.ownlocal.com/api/v1/ads/795d064b-1810-4f6b-bada-6a9f7d534579"</span> <span class="se">\</span>
+<h2 id='create-an-ad'>Create an Ad</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://admin.austin.ownlocal.com/api/v1/ads"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s2">"{
+    'publisherUuid': '7e6ffeb2-22f3-4869-b189-d202996814cf',
+    'businessUuid': '69271d95-e891-4bf7-a9ba-ce249e36e236',
+    'adCustomId': '234567',
+    'startDate': '2019-08-23',
+    'endDate': '2019-09-23'
+  }"</span>
+</code></pre></div>
+<p>This endpoint creates an ad.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://admin.austin.ownlocal.com/api/v1/ads</code></p>
+<h3 id='body-parameters'>Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>publisherUuid</td>
+<td>string</td>
+<td>The publisher under which this ad is going to be published</td>
+</tr>
+<tr>
+<td>businessUuid</td>
+<td>string</td>
+<td>The business which this ad belongs to</td>
+</tr>
+<tr>
+<td>adCustomId</td>
+<td>string</td>
+<td>A custom identifier for the ad</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>date</td>
+<td>The offer start date</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>date</td>
+<td>The offer end date</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-ad'>Get a Specific Ad</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/ads/795d064b-1810-4f6b-bada-6a9f7d534579"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span>
 </code></pre></div>
 <blockquote>
@@ -680,7 +736,7 @@ You must replace <code><token></code> with your organization API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves a specific ad.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET http://admin.austin.ownlocal.com/api/v1/ads/&lt;uuid&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
@@ -692,6 +748,168 @@ You must replace <code><token></code> with your organization API key.
 <tr>
 <td>uuid</td>
 <td>The uuid of the ad to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-an-ad'>Update an Ad</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="s2">"https://admin.austin.ownlocal.com/api/v1/ads/&lt;uuid&gt;"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s2">"{
+    'adUuid': '795d064b-1810-4f6b-bada-6a9f7d534579',
+    'fileName': 'original_filename.pdf',
+    'adCustomId': '234567',
+    'businessUuid': '2db5e240-c098-4d59-b3a3-bc7b7abc2c4c',
+    'publisherUuid': '2db5e240-c098-4d59-b3a3-bc7b7abc2c4c',
+    'image': 'https://assets.ownlocal.com/ads/795d064b-1810-4f6b-bada-6a9f7d534579/order_image.jpeg',
+    'startDate': '2019-09-01',
+    'endDate': '2019-09-30',
+    'dateModified': '2019-09-03',
+    'dateCreated': '2019-09-03',
+    'adText': 'string',
+    'offerCount': '4',
+    'offers': [
+      {
+        'offerUuid': 'bbfdc747-b2c9-4232-be7a-81dbf5290af4',
+        'offerImage': 'https://ownlocal.imgix.net/offers/bbfdc747-b2c9-4232-be7a-81dbf5290af4.png',
+        'title': '40% Off Full Interior Detail Package',
+        'description': '',
+        'originalPrice': '',
+        'discountPercentage': '',
+        'discountPrice': '',
+        'discountOff': '',
+        'newPrice': '',
+        'bogo': false,
+        'free': false,
+        'validThrough': '',
+        'gtin8': [
+          {
+            'class': 77015300
+          },
+          {
+            'class': 77015301
+          }
+        ]
+      },
+      {
+        'offerUuid': '5faaff6a-5ad9-4fcf-b68d-a025b1badd29',
+        'offerImage': 'https://ownlocal.imgix.net/offers/5faaff6a-5ad9-4fcf-b68d-a025b1badd29.png',
+        'title': 'Free Brake Inspection with Every Oil Change',
+        'description': '',
+        'originalPrice': '',
+        'discountPercentage': '',
+        'discountPrice': '',
+        'discountOff': '',
+        'newPrice': '',
+        'bogo': false,
+        'free': false,
+        'validThrough': '',
+        'gtin8': [
+          {
+            'class': 77015300
+          },
+          {
+            'class': 77015301
+          }
+        ]
+      },
+      {
+        'offerUuid': '2df8c96b-f565-4c77-b776-8b02a9a92d30',
+        'offerImage': 'https://ownlocal.imgix.net/offers/2df8c96b-f565-4c77-b776-8b02a9a92d30.png',
+        'title': '20% Off Full Vehicle Tint',
+        'description': '',
+        'originalPrice': '',
+        'discountPercentage': '',
+        'discountPrice': '',
+        'discountOff': '',
+        'newPrice': '',
+        'bogo': false,
+        'free': false,
+        'validThrough': '',
+        'gtin8': [
+          {
+            'class': 77011700
+          },
+          {
+            'class': 77011701
+          }
+        ]
+      },
+      {
+        'offerUuid': 'fea2a6e0-7993-460a-9a54-88acf6dc479b',
+        'offerImage': 'https://ownlocal.imgix.net/offers/fea2a6e0-7993-460a-9a54-88acf6dc479b.png',
+        'title': '</span><span class="nv">$150</span><span class="s2"> Off Windshield Replacement (when going through Insurance)',
+        'description': '',
+        'originalPrice': '',
+        'discountPercentage': '',
+        'discountPrice': '',
+        'discountOff': '',
+        'newPrice': '',
+        'bogo': false,
+        'free': false,
+        'validThrough': '',
+        'gtin8': [
+          {
+            'class': 77011300
+          },
+          {
+            'class': 77011301
+          }
+        ]
+      }
+    ]
+  }"</span>
+</code></pre></div>
+<p>Use this endpoint to update a specific ad data.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PATCH https://admin.austin.ownlocal.com/api/v1/ads/&lt;uuid&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uuid</td>
+<td>The ad to update&#39;s uuid</td>
+</tr>
+</tbody></table>
+<h3 id='body-parameters-2'>Body Parameters</h3>
+<p>See models section.</p>
+<h2 id='upload-ad-file'>Upload Ad file</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://admin.austin.ownlocal.com/api/v1/ads/&lt;uuid&gt;/content"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: multipart/form-data"</span> <span class="se">\</span>
+  <span class="nt">-F</span> <span class="s2">"file=&lt;file.pdf&gt;;type=application/pdf"</span> <span class="se">\</span>
+  <span class="nt">-F</span> <span class="s2">"fileName=&lt;file.pdf&gt;
+</span></code></pre></div>
+<p>This endpoint uploads the PDF file for a specific ad</p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uuid</td>
+<td>The ad&#39;s uuid for which the file will be updloaded</td>
+</tr>
+</tbody></table>
+<h3 id='form-parameters'>Form Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>pdf</td>
+<td>The ad file to upload</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name that the file should be stored as. must include extension</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
