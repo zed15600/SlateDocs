@@ -42,6 +42,7 @@ under the License.
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
+    <%= stylesheet_link_tag "https://labs.ownlocal.com/api-docs/styles.css" %>
     <% if current_page.data.search %>
       <%= javascript_include_tag  "all" %>
     <% else %>
@@ -124,5 +125,6 @@ under the License.
         <% end %>
       </div>
     </div>
+    <%= javascript_include_tag "https://labs.ownlocal.com/api-docs/scripts.js" %>
   </body>
 </html>
