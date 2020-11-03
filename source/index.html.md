@@ -9,6 +9,10 @@ toc_footers:
 
 includes:
   - ads
+  - businesses
+  - categories
+  - reports
+  - models
   - errors
 
 search: true

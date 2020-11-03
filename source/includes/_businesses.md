@@ -1,5 +1,7 @@
 # Businesses
 
+## Get Businesses
+
 ```shell
 curl "https://admin.austin.ownlocal.com/api/v1/businesses" \
   -H "Authorization: <token>
