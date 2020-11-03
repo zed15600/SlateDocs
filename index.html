@@ -296,7 +296,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-55027a40.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
         </div>
@@ -328,6 +328,59 @@
                   </li>
                   <li>
                     <a href="#upload-ad-file" class="toc-h2 toc-link" data-title="Upload Ad file">Upload Ad file</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#businesses" class="toc-h1 toc-link" data-title="Businesses">Businesses</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-businesses" class="toc-h2 toc-link" data-title="Get Businesses">Get Businesses</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-business" class="toc-h2 toc-link" data-title="Create a Business">Create a Business</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-business" class="toc-h2 toc-link" data-title="Get a Specific Business">Get a Specific Business</a>
+                  </li>
+                  <li>
+                    <a href="#upload-image-for-a-business" class="toc-h2 toc-link" data-title="Upload Image for a Business">Upload Image for a Business</a>
+                  </li>
+                  <li>
+                    <a href="#upload-image-for-a-business-2" class="toc-h2 toc-link" data-title="Upload Image for a Business">Upload Image for a Business</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#categories" class="toc-h1 toc-link" data-title="Categories">Categories</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-categories" class="toc-h2 toc-link" data-title="Get Categories">Get Categories</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#reports" class="toc-h1 toc-link" data-title="Reports">Reports</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ads" class="toc-h2 toc-link" data-title="Ads">Ads</a>
+                  </li>
+                  <li>
+                    <a href="#business" class="toc-h2 toc-link" data-title="Business">Business</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#models" class="toc-h1 toc-link" data-title="Models">Models</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ad" class="toc-h2 toc-link" data-title="Ad">Ad</a>
+                  </li>
+                  <li>
+                    <a href="#offer" class="toc-h2 toc-link" data-title="Offer">Offer</a>
+                  </li>
+                  <li>
+                    <a href="#business" class="toc-h2 toc-link" data-title="Business">Business</a>
                   </li>
               </ul>
           </li>
@@ -912,7 +965,683 @@ You must replace <code><token></code> with your organization API key.
 <td>The name that the file should be stored as. must include extension</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
+<h1 id='businesses'>Businesses</h1><h2 id='get-businesses'>Get Businesses</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/businesses"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;
+</span></code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"businessUuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69271d95-e891-4bf7-a9ba-ce249e36e236"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"businessCustomId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23456"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"publisherUuids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"e94df8d7-cc45-4ec9-b9fa-e42f04f74c38"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"9103093d-596a-4ed4-a0ea-d7a5bfc35912"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cielo Azul Mexican Grill"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"logoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.cielobluemexreservations.com/CieloBlueMexicanGrill_logo.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.cielobluecantina.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"urls"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.ciellobluemexreservations.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"laber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reservations"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We provide our customers with a fun and happy environment along with our enthusiastic staff, always making sure our customers have the greatest time in our restaurants. We try to make everyone of our customers feel welcome, and to make them have a great experience with us."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generalmgr@cielobluecantina.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"openingHours"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mo,Tu,We,Th,Fr 09:00-12:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hoursGeneralDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open 6 days a week, Tuesday to Sunday"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conditionsOfAccess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reservations accepted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"streetAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"197 Bloor St E"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"addressLocality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oshawa"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"addressRegion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L1H 3M3"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"telephones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"905-720-2326"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"Food and Beverage"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"subCategories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"Mexican Food"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"social"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"facebookUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"instagramUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.instagram.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"twitterUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.twitter.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"youtubeUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"yelpUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.yelp.com/biz/Cielo-Blue-Belmont"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"acceptedPaymentMethods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"MasterCard"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Cash"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"https://assets.ownlocal.com/images/a78feabb-df16-4fde-87aa-fba233d71671.jpeg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"https://assets.ownlocal.com/images/bbfe0e1f-0d8a-40df-86bd-c6a2250c09ec.jpeg"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all businesses.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://admin.austin.ownlocal.com/api/v1/businesses</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>categories</td>
+<td>string array</td>
+<td>Retrieves businesses belonging to those categories</td>
+</tr>
+<tr>
+<td>subCategories</td>
+<td>string array</td>
+<td>Retrieves businesses belonging to those sub categories</td>
+</tr>
+<tr>
+<td>dateModifiedMin</td>
+<td>date</td>
+<td>Retrieves businesses modified that day or after</td>
+</tr>
+<tr>
+<td>dateModifiedMax</td>
+<td>date</td>
+<td>Retrieves businesses modified that day or before</td>
+</tr>
+<tr>
+<td>dateCreatedMin</td>
+<td>date</td>
+<td>Retrieves businesses created that day or after</td>
+</tr>
+<tr>
+<td>dateCreatedMax</td>
+<td>date</td>
+<td>Retrieves businesses created that day or before</td>
+</tr>
+<tr>
+<td>publisherUuids</td>
+<td>[string] array</td>
+<td>Retrieves businesses listed in those partners</td>
+</tr>
+<tr>
+<td>sortedBy</td>
+<td>string</td>
+<td>Specifies the sorting order</td>
+</tr>
+<tr>
+<td>size</td>
+<td>integer</td>
+<td>Specifies the response size in businesses amount (default: 30)</td>
+</tr>
+<tr>
+<td>page</td>
+<td>integer</td>
+<td>Specifies the page to retrieve based in the size parameter (default: 1)</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-business'>Create a Business</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://admin.austin.ownlocal.com/api/v1/businesses"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span>
+  <span class="nt">-d</span> <span class="s2">"{
+    'businessUuid': '69271d95-e891-4bf7-a9ba-ce249e36e236',
+    'businessCustomId': '23456',
+    'publisherUuids': [
+      'e94df8d7-cc45-4ec9-b9fa-e42f04f74c38',
+      '9103093d-596a-4ed4-a0ea-d7a5bfc35912'
+    ],
+    'name': 'Cielo Azul Mexican Grill',
+    'logoUrl': 'http://www.cielobluemexreservations.com/CieloBlueMexicanGrill_logo.jpg',
+    'website': 'http://www.cielobluecantina.com',
+    'urls': [
+      {
+        'url': 'http://www.ciellobluemexreservations.com',
+        'laber': 'Reservations'
+      }
+    ],
+    'description': 'We provide our customers with a fun and happy environment along with our enthusiastic staff, always making sure our customers have the greatest time in our restaurants. We try to make everyone of our customers feel welcome, and to make them have a great experience with us.',
+    'email': 'generalmgr@cielobluecantina.com',
+    'openingHours': 'Mo,Tu,We,Th,Fr 09:00-12:00',
+    'hoursGeneralDescription': 'Open 6 days a week, Tuesday to Sunday',
+    'conditionsOfAccess': 'reservations accepted',
+    'locations': [
+      {
+        'streetAddress': '197 Bloor St E',
+        'addressLocality': 'Oshawa',
+        'addressRegion': 'ON',
+        'postalCode': 'L1H 3M3',
+        'telephones': [
+          '905-720-2326'
+        ]
+      }
+    ],
+    'categories': [
+      'Food and Beverage'
+    ],
+    'subCategories': [
+      'Mexican Food'
+    ],
+    'social': {
+      'facebookUrl': 'https://www.facebook.com/CieloBlueBelmont/',
+      'instagramUrl': 'https://www.instagram.com/CieloBlueBelmont/',
+      'twitterUrl': 'https://www.twitter.com/CieloBlueBelmont/',
+      'youtubeUrl': 'https://www.youtube.com/CieloBlueBelmont/',
+      'yelpUrl': 'https://www.yelp.com/biz/Cielo-Blue-Belmont'
+    },
+    'acceptedPaymentMethods': [
+      'MasterCard',
+      'Cash'
+    ],
+    'images': [
+      'https://assets.ownlocal.com/images/a78feabb-df16-4fde-87aa-fba233d71671.jpeg',
+      'https://assets.ownlocal.com/images/bbfe0e1f-0d8a-40df-86bd-c6a2250c09ec.jpeg'
+    ]
+  }"</span>
+</code></pre></div>
+<p>This endpoint creates a business.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://admin.austin.ownlocal.com</code></p>
+<h3 id='body-parameters'>Body Parameters</h3>
+<p>See models section.</p>
+<h2 id='get-a-specific-business'>Get a Specific Business</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/businesses/&lt;uuid&gt;"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;
+</span></code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"businessUuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69271d95-e891-4bf7-a9ba-ce249e36e236"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"businessCustomId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23456"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"publisherUuids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"e94df8d7-cc45-4ec9-b9fa-e42f04f74c38"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"9103093d-596a-4ed4-a0ea-d7a5bfc35912"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cielo Azul Mexican Grill"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"logoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.cielobluemexreservations.com/CieloBlueMexicanGrill_logo.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.cielobluecantina.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"urls"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.ciellobluemexreservations.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"laber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reservations"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We provide our customers with a fun and happy environment along with our enthusiastic staff, always making sure our customers have the greatest time in our restaurants. We try to make everyone of our customers feel welcome, and to make them have a great experience with us."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generalmgr@cielobluecantina.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"openingHours"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mo,Tu,We,Th,Fr 09:00-12:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hoursGeneralDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open 6 days a week, Tuesday to Sunday"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"conditionsOfAccess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reservations accepted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"streetAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"197 Bloor St E"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"addressLocality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oshawa"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"addressRegion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L1H 3M3"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"telephones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"905-720-2326"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Food and Beverage"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"subCategories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Mexican Food"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"social"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"facebookUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"instagramUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.instagram.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"twitterUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.twitter.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"youtubeUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"yelpUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.yelp.com/biz/Cielo-Blue-Belmont"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"acceptedPaymentMethods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"MasterCard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Cash"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://assets.ownlocal.com/images/a78feabb-df16-4fde-87aa-fba233d71671.jpeg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"https://assets.ownlocal.com/images/bbfe0e1f-0d8a-40df-86bd-c6a2250c09ec.jpeg"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific business.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://admin.austin.ownlocal.com/api/v1/businesses/&lt;uuid&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uuid</td>
+<td>The uuid of the business to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='upload-image-for-a-business'>Upload Image for a Business</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://admin.austin.ownlocal.com/api/v1/businesses/&lt;uuid&gt;/images"</span> <span class="se">\</span>
+ <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span> <span class="se">\</span>
+ <span class="nt">-H</span> <span class="s2">"Content-Type: multipart/form-data"</span> <span class="se">\</span>
+ <span class="nt">-F</span> <span class="s2">"file=&lt;file.png&gt;;type=image/&lt;format&gt;"</span> <span class="se">\</span>
+ <span class="nt">-F</span> <span class="s2">"fileName=&lt;file.png&gt;
+</span></code></pre></div>
+<p>Use this endpoint to upload images for a specific business.</p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uuid</td>
+<td>The business&#39;s uuid for which the image will be updloaded</td>
+</tr>
+</tbody></table>
+<h3 id='form-parameters'>Form Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>image</td>
+<td>The image to upload</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name that the file should be stored as. must include extension</td>
+</tr>
+</tbody></table>
+<h2 id='upload-image-for-a-business-2'>Upload Image for a Business</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://admin.austin.ownlocal.com/api/v1/businesses/&lt;uuid&gt;/logo"</span> <span class="se">\</span>
+ <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;"</span> <span class="se">\</span>
+ <span class="nt">-H</span> <span class="s2">"Content-Type: multipart/form-data"</span> <span class="se">\</span>
+ <span class="nt">-F</span> <span class="s2">"file=&lt;file.png&gt;;type=image/&lt;format&gt;"</span> <span class="se">\</span>
+ <span class="nt">-F</span> <span class="s2">"fileName=&lt;file.png&gt;
+</span></code></pre></div>
+<p>Use this endpoint to upload the logo for a specific business.</p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uuid</td>
+<td>The business&#39;s uuid for which the logo will be updloaded</td>
+</tr>
+</tbody></table>
+<h3 id='form-parameters-2'>Form Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>image</td>
+<td>The image to upload</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name that the file should be stored as. must include extension</td>
+</tr>
+</tbody></table>
+<h1 id='categories'>Categories</h1><h2 id='get-categories'>Get Categories</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/categories"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;
+</span></code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Communication"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subCategories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"Broadcasting Services"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Cable TV"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Newspapers and Magazines"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Other"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Publishing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Radio Stations"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Telecommunications"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"TV Stations"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint return all categories</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://admin.austin.ownlocal.com/api/v1/categories</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sortedBy</td>
+<td>string</td>
+<td>-</td>
+<td>Specifies the sorting order</td>
+</tr>
+<tr>
+<td>size</td>
+<td>integer</td>
+<td>25</td>
+<td>Specifies the response size in businesses amount</td>
+</tr>
+<tr>
+<td>page</td>
+<td>integer</td>
+<td>1</td>
+<td>Specifies the page to retrieve based in the size parameter</td>
+</tr>
+</tbody></table>
+<h1 id='reports'>Reports</h1><h2 id='ads'>Ads</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/reports/ads"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;
+</span></code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"publisher_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Pub News"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"publisher_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2db5e240-c098-4d59-b3a3-bc7b7abc2c4c"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ads"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87415afa-ac85-4f55-b869-c63532d02ffe"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-24"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-25"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"online_impressions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="mi">11346</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"interaction_breakdown"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"breakdowns"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"total_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"about_us_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"contact_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"expand_ad_unit_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"print_ad_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"website_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"facebook_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"twitter_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"instagram_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"yelp_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"call_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"directions_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"contact_form_submits"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"share"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a3c6f485-07b1-4241-9bc7-9945be77d0a5"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"online_impressions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="mi">11410</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"interaction_breakdown"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"breakdowns"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"total_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"about_us_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"contact_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"expand_ad_unit_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"print_ad_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"website_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"facebook_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"twitter_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"instagram_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"yelp_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"call_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"directions_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"contact_form_submits"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"share"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint returns reports data for all the ads running during the given dates.</p>
+<h3 id='hhtp-request'>HHTP Request</h3>
+<p><code>GET https://admin.austin.ownlocal.com/api/v1/reports/ads</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>publisher_id</td>
+<td>string</td>
+<td>-</td>
+<td>Returns reports only for ads published by the provided partner</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td>1 month ago</td>
+<td>Sets the start date for the report&#39;s data</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>today</td>
+<td>Sets the end date for the report&#39;s data</td>
+</tr>
+</tbody></table>
+<h2 id='business'>Business</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://admin.austin.ownlocal.com/api/v1/reports/business"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;token&gt;
+</span></code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"business_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Local Business"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"business_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2db5e240-c098-4d59-b3a3-bc7b7abc2c4c"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reach_report"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"print_distribution"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"online_impressions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="mi">277160</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"total_ads"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"directory"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"days"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"impressions"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"origami"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"ads"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"days"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"impressions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="mi">277160</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"interaction_breakdown"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"breakdowns"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"overall"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"total_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">209</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"about_us_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"contact_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"expand_ad_unit_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">181</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"print_ad_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"website_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"facebook_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"twitter_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"instagram_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"yelp_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"call_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"directions_clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"contact_form_submits"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"share"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint returns reports data for a specific business in the given dates.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://admin.austin.ownlocal.com/api/v1/reports/business</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>publisher_id</td>
+<td>string</td>
+<td>-</td>
+<td>Required. The partner the business is listed under.</td>
+</tr>
+<tr>
+<td>business_id</td>
+<td>string</td>
+<td>-</td>
+<td>The business to generate data from. If not provided, all partner&#39;s businesses reports will be generated</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td>1 month ago</td>
+<td>Sets the start date for the report&#39;s data</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>today</td>
+<td>Sets the end date for the report&#39;s data</td>
+</tr>
+</tbody></table>
+<h1 id='models'>Models</h1><h2 id='ad'>Ad</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"adUuid(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"795d064b-1810-4f6b-bada-6a9f7d534579"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fileName(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{original_filename}.pdf"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"adCustomId(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"234567"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"businessUuid(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2db5e240-c098-4d59-b3a3-bc7b7abc2c4c"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"publisherUuid(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2db5e240-c098-4d59-b3a3-bc7b7abc2c4c"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"image(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.ownlocal.com/ads/795d064b-1810-4f6b-bada-6a9f7d534579/order_image.jpeg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"startDate(date)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"endDate(date)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dateModified(date)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dateCreated(date)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"adText(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example ad text."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"offerCount(integer)"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"offers(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="err">...</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='offer'>Offer</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"offerUuid(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bbfdc747-b2c9-4232-be7a-81dbf5290af4"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"offerImage(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ownlocal.imgix.net/offers/bbfdc747-b2c9-4232-be7a-81dbf5290af4.png"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40% Off Full Interior Detail Package"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"originalPrice(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"discountPercentage(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"discountPrice(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"discountOff(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"newPrice(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bogo(boolean)"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"free(boolean)"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"validThrough(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is an example text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"gtin8(array)"</span><span class="p">:</span><span class="w">   </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"class(integer)"</span><span class="p">:</span><span class="w"> </span><span class="mi">77011700</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='business'>Business</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"businessUuid(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69271d95-e891-4bf7-a9ba-ce249e36e236"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"businessCustomId(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23456"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"publisherUuids(array)"</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"e94df8d7-cc45-4ec9-b9fa-e42f04f74c38"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"9103093d-596a-4ed4-a0ea-d7a5bfc35912"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"name(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cielo Azul Mexican Grill"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"logoUrl(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.cielobluemexreservations.com/CieloBlueMexicanGrill_logo.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"website(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.cielobluecantina.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"urls(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"url(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.exampleurl.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"label(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"homepage"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"description(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We provide our customers with a fun and happy environment along with our enthusiastic staff, always making sure our customers have the greatest time in our restaurants. We try to make everyone of our customers feel welcome, and to make them have a great experience with us."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generalmgr@cielobluecantina.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"openingHours(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mo,Tu,We,Th,Fr 09:00-12:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hoursGeneralDescription(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open 6 days a week, Tuesday to Sunday"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"conditionsOfAccess(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reservations accepted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"locations(array)"</span><span class="p">:</span><span class="w">   </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"streetAddress(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"197 Bloor St E"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"addressLocality(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oshawa"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"addressRegion(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"postalCode(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L1H 3M3"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"telephones(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"905-720-2326"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"905-720-2326"</span><span class="p">,</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"categories(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Food and Beverage"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"subCategories(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Mexican Food"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"social(object)"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"facebookUrl(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"instagramUrl(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.instagram.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"twitterUrl(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.twitter.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"youtubeUrl(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.youtube.com/CieloBlueBelmont/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"yelpUrl(string)"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.yelp.com/biz/Cielo-Blue-Belmont"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"acceptedPaymentMethods(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"MasterCard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Cash"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"images(array)"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://assets.ownlocal.com/images/a78feabb-df16-4fde-87aa-fba233d71671.jpeg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"https://assets.ownlocal.com/images/bbfe0e1f-0d8a-40df-86bd-c6a2250c09ec.jpeg"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
@@ -935,15 +1664,15 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- The resource requested is hidden for administrators only.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified resource could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a resource with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -951,7 +1680,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>Gone -- The resource requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>418</td>
@@ -959,7 +1688,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many resources! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
